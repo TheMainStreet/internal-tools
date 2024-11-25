@@ -8,6 +8,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { toast } from 'sonner';
 import { createClient } from '@/lib/supabase/client';
+import {GoogleLoginButton} from "@/components/login/google-login-button";
 
 export function LoginForm() {
   const [isLoading, setIsLoading] = useState(false);
@@ -56,7 +57,7 @@ export function LoginForm() {
         <CardDescription>Enter your credentials to access your account</CardDescription>
       </CardHeader>
       <CardContent>
-        <form onSubmit={onSubmit} className="space-y-4">
+        <form onSubmit={onSubmit} className="space-y-4 mb-4">
           <div className="space-y-2">
             <Label htmlFor="email">Email</Label>
             <Input 
@@ -82,6 +83,7 @@ export function LoginForm() {
             {isLoading ? 'Signing in...' : 'Sign In'}
           </Button>
         </form>
+        <GoogleLoginButton token={null}/>
       </CardContent>
     </Card>
   );
