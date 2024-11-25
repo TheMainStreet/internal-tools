@@ -19,7 +19,7 @@ To read more about using these font, please visit the Next.js documentation:
 **/
 'use client';
 import { Button } from "@/components/ui/button"
-import {createClient} from "@/utils/supabase/client"
+import {createClient} from "@/lib/supabase/client"
 
 export function GoogleLoginButton({ token}) {
 
