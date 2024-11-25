@@ -1,9 +1,7 @@
 import { createClient } from "@/lib/supabase/server";
 import { NextResponse } from "next/server";
 
-export const config = {
-  type: "experimental-background",
-};
+export const config = 'force-dynamic'
 
 export async function GET(request) {
   // The `/auth/callback` route is required for the server-side auth flow implemented
