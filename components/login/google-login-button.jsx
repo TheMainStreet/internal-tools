@@ -29,7 +29,7 @@ export function GoogleLoginButton({ token}) {
     const {error, data} = await supabase.auth.signInWithOAuth({
       provider: 'google',
       options: {
-        redirectTo: `https://gorgeous-blancmange-ad9e07.netlify.app/auth/callback${token ? '?token='  + token : ''}`,
+        redirectTo: `https://gorgeous-blancmange-ad9e07.netlify.app/api/auth/callback${token ? '?token='  + token : ''}`,
         queryParams: {
           access_type: 'offline',
           prompt: 'consent',
